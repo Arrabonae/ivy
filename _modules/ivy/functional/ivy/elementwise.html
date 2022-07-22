@@ -2572,7 +2572,7 @@
 <span class="sd">    &gt;&gt;&gt; z = ivy.isinf(x)</span>
 <span class="sd">    &gt;&gt;&gt; print(x)</span>
 <span class="sd">    ivy.array([[[False],</span>
-<span class="sd">            [ True],</span>
+<span class="sd">            [True],</span>
 <span class="sd">            [False]]])</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[-math.inf, np.inf, 0.0]])</span>
@@ -2594,7 +2594,7 @@
 <span class="sd">    &gt;&gt;&gt; print(z)</span>
 <span class="sd">    ivy.array([[False],</span>
 <span class="sd">        [False],</span>
-<span class="sd">        [ True]])</span>
+<span class="sd">        [True]])</span>
 
 
 <span class="sd">    With :code:`ivy.Container` input:</span>
@@ -2623,12 +2623,12 @@
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[[1.1], [float(&#39;inf&#39;)], [-6.3]]])</span>
 <span class="sd">    &gt;&gt;&gt; x.isinf()</span>
 <span class="sd">    ivy.array([[[False],</span>
-<span class="sd">            [ True],</span>
+<span class="sd">            [True],</span>
 <span class="sd">            [False]]])</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[-math.inf, np.inf, 0.0]])</span>
 <span class="sd">    &gt;&gt;&gt; x.isinf()</span>
-<span class="sd">    ivy.array([[ True,  True, False]])</span>
+<span class="sd">    ivy.array([[ True, True, False]])</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.zeros((3, 3))</span>
 <span class="sd">    &gt;&gt;&gt; x.isinf()</span>
@@ -2642,7 +2642,7 @@
 <span class="sd">    &gt;&gt;&gt; x.isinf()</span>
 <span class="sd">    ivy.array([[False],</span>
 <span class="sd">        [False],</span>
-<span class="sd">        [ True]])</span>
+<span class="sd">        [True]])</span>
 
 <span class="sd">    With :code:`ivy.Container` input:</span>
 <span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([-1, -np.inf, 1.23]), \</span>
