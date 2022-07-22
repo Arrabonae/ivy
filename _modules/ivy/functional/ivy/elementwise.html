@@ -2639,8 +2639,7 @@
 <span class="sd">    With :code:`ivy.NativeArray` inputs:</span>
 <span class="sd">    </span>
 <span class="sd">    &gt;&gt;&gt; x = ivy.native_array([[1], [5], [-ivy.inf]])</span>
-<span class="sd">    &gt;&gt;&gt; z = ivy.isinf(x)</span>
-<span class="sd">    &gt;&gt;&gt; print(z)</span>
+<span class="sd">    &gt;&gt;&gt; x.isinf(x)</span>
 <span class="sd">    ivy.array([[False],</span>
 <span class="sd">        [False],</span>
 <span class="sd">        [ True]])</span>
