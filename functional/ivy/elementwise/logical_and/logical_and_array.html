@@ -44,11 +44,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../background.html">Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../related_work.html">Related Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../extensions.html">Extensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../deep_dive.html">Deep Dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Functions</span></p>
 <ul class="current">
@@ -124,8 +125,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../erf.html">erf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../maximum.html">maximum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../minimum.html">minimum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reciprocal.html">reciprocal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deg2rad.html">deg2rad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rad2deg.html">rad2deg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../trunc_divide.html">trunc_divide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../isreal.html">isreal</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../experimental.html">Experimental</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../layers.html">Layers</a></li>
@@ -149,14 +156,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/converters.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/sequential.html">Sequential</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/converters.html">Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/sequential.html">Sequential</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/norms.html">Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/optimizers.html">Optimizers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/module.html">Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/activations.html">Activations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nested array</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nested_array/nested_array.html">Nested array</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
@@ -202,7 +213,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="ivy.array.array_methods.logical_and">
 <span class="sig-prename descclassname">ivy.Array.</span></span><span class="sig-name descname"><span class="pre">logical_and</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/array/elementwise.html#ArrayWithElementwise.logical_and"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.array.array_methods.logical_and" title="Permalink to this definition"></a></dt>
-<dd><p>ivy.Array instance method variant of <a href="../logical_and/logical_and_functional.html">ivy.logical_and</a>. method simply wraps the function, and so the docstring for
+<dd><p>ivy.Array instance method variant of <a href="../logical_and/logical_and_functional.html">ivy.logical_and</a>.
+This method simply wraps the function, and so the docstring for
 ivy.logical_and also applies to this method with minimal changes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,6 +235,13 @@ the inputs broadcast to.</p></li>
 must have a data type of <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<p>Using ‘ivy.Array’ instance:
+&gt;&gt;&gt; x = ivy.array([True, False, True, False])
+&gt;&gt;&gt; y = ivy.array([True, True, False, False])
+&gt;&gt;&gt; z = x.logical_and(y)
+&gt;&gt;&gt; print(z)
+ivy.array([True, False, False, False])</p>
 </dd></dl>
 
 <div class="line-block">
@@ -243,7 +262,7 @@ must have a data type of <code class="docutils literal notranslate"><span class=
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Ivy Team.</p>
+    <p>&#169; Copyright 2020-2022, Ivy Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
